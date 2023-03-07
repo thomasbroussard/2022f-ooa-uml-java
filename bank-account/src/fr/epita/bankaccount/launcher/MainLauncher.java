@@ -1,6 +1,7 @@
 package fr.epita.bankaccount.launcher;
 
 import fr.epita.bankaccount.datamodel.Customer;
+import fr.epita.bankaccount.datamodel.Stock;
 
 public class MainLauncher {
 
@@ -21,9 +22,14 @@ public class MainLauncher {
         thomas.setName("Thomas");
         thomas.setAddress("Paris");
 
-        System.out.println("created customer :" + thomas.getName() + " address: " + thomas.getAddress());
+        System.out.println("created customer: " + thomas.getName() + ", address: " + thomas.getAddress());
 
 
+        Stock gold = new Stock();
+        gold.setName("gold");
+        gold.setCurrentValue(10.0);
+
+        System.out.println("created stock: "+ gold.getName() + ", currentValue: " + gold.getCurrentValue());
 
     }
 
