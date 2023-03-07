@@ -19,8 +19,9 @@ public class MainLauncher {
         Customer thomas = new Customer();
         //thomas initialization (name and address)
         thomas.setName("");
-        thomas.address = "Paris";
-        thomas.name = "";
+
+//        thomas.address = "Paris";
+//        thomas.name = "";
 
 
     }
