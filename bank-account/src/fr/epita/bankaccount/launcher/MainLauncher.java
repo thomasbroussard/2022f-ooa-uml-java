@@ -17,14 +17,22 @@ public class MainLauncher {
 //        String name2 = "";
 //        String address2 ="";
 
+        //lazy initialization of customer instance
         Customer thomas = new Customer();
         //thomas initialization (name and address)
         thomas.setName("Thomas");
         thomas.setAddress("Paris");
-
         System.out.println("created customer: " + thomas.getName() + ", address: " + thomas.getAddress());
 
+        //"eager" initialization of customer instance
+        Customer anotherCustomer = new Customer("Quentin", "Paris");
+        System.out.println("created customer: " + anotherCustomer.getName() + ", address: " + anotherCustomer.getAddress());
 
+
+        Customer invalidCustomer = new Customer("", "");
+
+
+        //stock creation
         Stock gold = new Stock();
         gold.setName("gold");
         gold.setCurrentValue(10.0);
