@@ -18,10 +18,11 @@ public class MainLauncher {
 
         Customer thomas = new Customer();
         //thomas initialization (name and address)
-        thomas.setName("");
+        thomas.setName("Thomas");
+        thomas.setAddress("Paris");
 
-//        thomas.address = "Paris";
-//        thomas.name = "";
+        System.out.println("created customer :" + thomas.getName() + " address: " + thomas.getAddress());
+
 
 
     }

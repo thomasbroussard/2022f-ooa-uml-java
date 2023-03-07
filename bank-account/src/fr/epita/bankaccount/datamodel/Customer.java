@@ -22,4 +22,11 @@ public class Customer {
         this.name = newName;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 }
