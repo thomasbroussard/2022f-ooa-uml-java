@@ -27,4 +27,12 @@ public class Stock {
         }
         this.currentValue = currentValue;
     }
+
+    @Override
+    public String toString() {
+        return "Stock{" +
+                "name='" + name + '\'' +
+                ", currentValue=" + currentValue +
+                '}';
+    }
 }

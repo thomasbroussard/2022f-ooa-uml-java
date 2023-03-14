@@ -12,16 +12,13 @@ public class UserInputLauncher {
         InputStream input = System.in;
 
         Scanner scanner = new Scanner(System.in);
-//        System.out.println("Please enter a customer name");
-//        String name = scanner.nextLine();
-//        System.out.println("the customer name is : " + name);
-//        System.out.println("Please enter the customer address");
-//        String address = scanner.nextLine();
-//        System.out.println("the customer address is : " + address);
-//        Customer customer = new Customer(name, address);
-//
-//        System.out.println("created customer: "+ customer);
+        Customer customer = createCustomerFromUserInput(scanner);
 
+        Stock stock = createStockFromUserInput(scanner);
+
+    }
+
+    private static Stock createStockFromUserInput(Scanner scanner) {
         System.out.println("please input a stock name");
         String stockName = scanner.nextLine();
         System.out.println("please input a stock current value (float)");
@@ -31,6 +28,19 @@ public class UserInputLauncher {
         stock.setCurrentValue(stockValue);
         stock.setName(stockName);
         System.out.println(stock);
+        return stock;
+    }
 
+    private static Customer createCustomerFromUserInput(Scanner scanner) {
+        System.out.println("Please enter a customer name");
+        String name = scanner.nextLine();
+        System.out.println("the customer name is : " + name);
+        System.out.println("Please enter the customer address");
+        String address = scanner.nextLine();
+        System.out.println("the customer address is : " + address);
+        Customer customer = new Customer(name, address);
+
+        System.out.println("created customer: "+ customer);
+        return customer;
     }
 }
