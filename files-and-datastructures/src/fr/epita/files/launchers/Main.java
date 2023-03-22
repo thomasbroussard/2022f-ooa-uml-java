@@ -22,7 +22,7 @@ public class Main {
         testLogger.info("test from main!");
 
         //2014/05/31 - 10:06:14.795 : fr.tbr.iamcore.Main.main()[19] : [INFO] Beginning of the program
-
+        Files.rea
     }
 
 
