@@ -18,6 +18,11 @@ public class Main {
         for (String s : strings){
             System.out.println(s);
         }
+        //do your stuff
+
+        List<Fruit> fruits = null; // load me this fruits list!
+
+
     }
 
     private static void writeTests() {
