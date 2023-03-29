@@ -1,5 +1,7 @@
 package fr.epita.db.services;
 
+import fr.epita.db.datamodel.Doctor;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -24,8 +26,13 @@ public class DoctorDAO {
 
 
     public void save(Doctor doctor){
-        connection.prepareStatement("INSERT INTO DOCTOR(id,name) values (" + id + ", " + name + ")")
-                .execute();
+        try {
+            connection.prepareStatement("INSERT INTO DOCTOR(id,name) values (" + doctor.getId() + ", " + doctor.getName() + ")")
+                    .execute();
+        }catch (Exception e){
+            //todo custom exception
+            e.printStackTrace();
+        }
     }
 
     public List<Doctor> search(){

@@ -1,3 +1,7 @@
+import fr.epita.db.datamodel.Doctor;
+import fr.epita.db.services.DoctorDAO;
+
+import javax.print.Doc;
 import java.sql.*;
 import java.util.List;
 
@@ -5,13 +9,13 @@ public class Main {
     public static void main(String[] args) throws SQLException {
 
         System.out.println("Hello world!");
-        Connection connection = connect();
+        DoctorDAO doctorDAO = new DoctorDAO();
 
-        ensureDDL(connection);
+        Doctor thomas = new Doctor(1, "Thomas");
+        Doctor quentin = new Doctor(2, "Quentin");
 
-        saveDoctor(connection, 1, "thomas");
-
-        saveDoctor(connection, 2, "quentin");
+        doctorDAO.save(thomas);
+        doctorDAO.save(quentin);
 
         searchDoctors(connection);
 
